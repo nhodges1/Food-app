@@ -9,6 +9,8 @@ import Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 public class Controller {
 
@@ -31,7 +33,7 @@ public class Controller {
 
     @PostMapping("register")
     public User register(@RequestBody User user){
-        return userService.register(user);
+        return userService.addAccount(user);
     }
 
     /**
@@ -40,7 +42,7 @@ public class Controller {
 
     @PostMapping("login")
     public User login(@RequestBody User user){
-        return userService.login(user);
+        return userService.existingAccount(user.getUserName(), user.getPassword());
     }
 
 
@@ -102,7 +104,7 @@ public class Controller {
      */
 
     @GetMapping("{user_id}/cart")
-    public Cart getCart(@PathVariable long id){
+    public List<Cart> getCart(@PathVariable long id){
         return cartService.getCart(id);
     }
 
