@@ -14,6 +14,7 @@ public class UserService {
     // new registration
     public User addAccount(User user) {
         if (user.getUserName() != "" && user.getPassword().length() >= 4) {
+            Optional<User> addAccount(User user);
             return user;
         }
         return null;
