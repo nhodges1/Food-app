@@ -1,4 +1,6 @@
 package Repository;
 
-public interface FooditemRepository {
+import Model.Fooditem;
+import org.springframework.data.jpa.repository.JpaRepository;
+public interface FooditemRepository extends JpaRepository<Fooditem, Long>{
 }
