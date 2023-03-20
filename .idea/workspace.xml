@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="Application and pom.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="cat service/repo, user model, controller update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/CartService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679343026826</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cat service/repo, user model, controller update">
+      <created>1679347989710</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679347989711</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +116,7 @@
     <MESSAGE value="Initial Files" />
     <MESSAGE value="Cart User models" />
     <MESSAGE value="Application and pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Application and pom.xml" />
+    <MESSAGE value="cat service/repo, user model, controller update" />
+    <option name="LAST_COMMIT_MESSAGE" value="cat service/repo, user model, controller update" />
   </component>
 </project>
