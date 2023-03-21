@@ -15,6 +15,7 @@ public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int foodId;
+    @Column
     private String foodName;
     private int categoryId;
     private String categoryName;

@@ -30,6 +30,6 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     List<Item> findFooditemByDescription(@Param("description")String description);
 
     @Query("FROM Fooditem WHERE foodTag= :foodTag")
-    List<Item> findFooditemByTag(@Param("foodId")String foodTag );
+    List<Item> findFooditemByTag(@Param("foodTag")String foodTag );
 
 }

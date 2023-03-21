@@ -71,7 +71,7 @@ public class Controller {
      * Endpoint on GET localhost:9000/items/{name} responds with a JSON containing item by name.
      */
 
-    @GetMapping("items/{name}")
+    @GetMapping("items/name/{name}")
     public List<Item> getFoodByName(@PathVariable String name){
         return itemService.getItemByName(name);
     }
@@ -81,9 +81,9 @@ public class Controller {
      * Endpoint on GET localhost:9000/items/{cat_id} responds with a JSON containing item by category id.
      */
 
-    @GetMapping("items/{cat_id}")
-    public Item getFoodByCategory(@PathVariable long id){
-        return itemService.getItemByCategory(id);
+    @GetMapping("items/category/{catId}")
+    public Item getFoodByCategory(@PathVariable long catId){
+        return itemService.getItemByCategory(catId);
     }
 
 
@@ -91,7 +91,7 @@ public class Controller {
      * Endpoint on GET localhost:9000/items/{tag} responds with a JSON containing item by tag.
      */
 
-    @GetMapping("items/{tag}")
+    @GetMapping("items/tag/{tag}")
     public List<Item> getFoodByTag(@PathVariable String tag){
         return itemService.getItemByTag(tag);
     }

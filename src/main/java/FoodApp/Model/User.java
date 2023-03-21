@@ -1,9 +1,11 @@
 package FoodApp.Model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class User {
+    @Id
     private String userId;
     private String userName;
     private String userEmail;
@@ -49,4 +51,5 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
