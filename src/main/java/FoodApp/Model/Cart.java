@@ -1,14 +1,17 @@
-package Model;
+package FoodApp.Model;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Cart {
-    public int user_id;
-    public int cart_id;
-    public int item_id;
-    public int quantity;
+    private int user_id;
+    private int cart_id;
+    private int item_id;
+    private int quantity;
 
-    public Cart(){}
+    private Cart(){}
 
-    public Cart(int user_id, int cart_id, int item_id, int quantity){
+    private Cart(int user_id, int cart_id, int item_id, int quantity){
         this.user_id = user_id;
         this.cart_id = cart_id;
         this.item_id = item_id;

@@ -1,25 +1,28 @@
-package Model;
+package FoodApp.Model;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class User {
-    public int userId;
-    public String userName;
-    public String userEmail;
-    public String password;
+    private String userId;
+    private String userName;
+    private String userEmail;
+    private String password;
 
     public User(){
 
     }
-    public User(int userId, String userName, String userEmail, String password){
+    public User(String userId, String userName, String userEmail, String password){
         this.userId = userId;
         this.userName = userName;
         this.userEmail = userEmail;
         this.password = password;
     }
-    public int getUserId(){
+    public String getUserId(){
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
