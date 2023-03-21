@@ -33,9 +33,9 @@ public class ItemService {
         return itemRepository.findFooditemByName(foodName);
     }
 
-    public Item getItemByCategory(long categoryId){
+    public Item getItemByCategory(long catId){
 
-        Optional<Item> fooditemOptional = itemRepository.findById(categoryId);
+        Optional<Item> fooditemOptional = itemRepository.findById(catId);
         Item fooditem = fooditemOptional.get();
         return fooditem;
     }

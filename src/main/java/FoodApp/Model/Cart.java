@@ -1,9 +1,11 @@
 package FoodApp.Model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
 @Entity
 public class Cart {
+    @Id
     private int user_id;
     private int cart_id;
     private int item_id;
@@ -49,4 +51,5 @@ public class Cart {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
 }
