@@ -11,7 +11,7 @@ import java.util.List;
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
-public class Fooditem {
+public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int foodId;
@@ -24,5 +24,5 @@ public class Fooditem {
 
     @OneToMany(fetch = FetchType.EAGER)
     @JsonManagedReference
-    private List<Fooditem> fooditem;
+    private List<Item> item;
 }

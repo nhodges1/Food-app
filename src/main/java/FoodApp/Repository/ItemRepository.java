@@ -1,21 +1,21 @@
 package FoodApp.Repository;
 
-import FoodApp.Model.Fooditem;
+import FoodApp.Model.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface FooditemRepository extends JpaRepository<Fooditem, Long> {
+public interface ItemRepository extends JpaRepository<Item, Long> {
 
 
     @Query("FROM Fooditem WHERE foodName= :foodName")
-    List<Fooditem> findFooditemByName(@Param("foodName") String foodName);
+    List<Item> findFooditemByName(@Param("foodName") String foodName);
 
 
     @Query("FROM Fooditem WHERE category= :foodName")
-    List<Fooditem> findFooditemByCategory(@Param("categoryName") String categoryName);
+    List<Item> findFooditemByCategory(@Param("categoryName") String categoryName);
 
   /*  @Query("FROM Fooditem WHERE foodId = :foodId")
     List<Fooditem> findFooditemByFoodId(@Param("foodId")Long foodId );
@@ -27,9 +27,9 @@ public interface FooditemRepository extends JpaRepository<Fooditem, Long> {
     List<Fooditem> findFooditemByPrice(@Param("foodId")Long priceOfItem );*/
 
     @Query("FROM Fooditem WHERE description= :description")
-    List<Fooditem> findFooditemByDescription(@Param("description")String description);
+    List<Item> findFooditemByDescription(@Param("description")String description);
 
     @Query("FROM Fooditem WHERE foodTag= :foodTag")
-    List<Fooditem> findFooditemByTag(@Param("foodId")long foodTag );
+    List<Item> findFooditemByTag(@Param("foodId")String foodTag );
 
 }

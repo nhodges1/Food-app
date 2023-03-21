@@ -1,7 +1,6 @@
 package FoodApp.Repository;
 
 import FoodApp.Model.Cart;
-import FoodApp.Model.Fooditem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

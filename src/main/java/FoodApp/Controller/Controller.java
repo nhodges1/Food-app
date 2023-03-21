@@ -1,10 +1,10 @@
 package FoodApp.Controller;
 
 import FoodApp.Model.Cart;
-import FoodApp.Model.Fooditem;
+import FoodApp.Model.Item;
 import FoodApp.Model.User;
 import FoodApp.Service.CartService;
-import FoodApp.Service.FooditemService;
+import FoodApp.Service.ItemService;
 import FoodApp.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,12 +15,12 @@ import java.util.List;
 public class Controller {
 
     UserService userService;
-    FooditemService fooditemService;
+    ItemService itemService;
     CartService cartService;
 
     @Autowired
-    public Controller(UserService userService, FooditemService fooditemService, CartService cartService) {
-        this.fooditemService = fooditemService;
+    public Controller(UserService userService, ItemService itemService, CartService cartService) {
+        this.itemService = itemService;
         this.userService = userService;
         this.cartService = cartService;
     }
@@ -53,17 +53,27 @@ public class Controller {
      */
 
     @GetMapping("items")
-    public List<Fooditem> getAllFoods() throws Exception {
-        return fooditemService.getAllFoods();
+    public List<Item> getAllFoods() throws Exception {
+        return itemService.getAllFoods();
     }
+
+    /**
+     * Endpoint on GET localhost:9000/items/{id} responds with a JSON containing item by name.
+     */
+
+    @GetMapping("items/{id}")
+    public Item getItemById(@PathVariable long id){
+        return itemService.getItemById(id);
+    }
+
 
     /**
      * Endpoint on GET localhost:9000/items/{name} responds with a JSON containing item by name.
      */
 
     @GetMapping("items/{name}")
-    public List<Fooditem> getFoodByName(@PathVariable String name){
-        return fooditemService.getFooditemByName(name);
+    public List<Item> getFoodByName(@PathVariable String name){
+        return itemService.getItemByName(name);
     }
 
 
@@ -72,8 +82,8 @@ public class Controller {
      */
 
     @GetMapping("items/{cat_id}")
-    public Fooditem getFoodByCategory(@PathVariable long id){
-        return fooditemService.getFooditemByCategory(id);
+    public Item getFoodByCategory(@PathVariable long id){
+        return itemService.getItemByCategory(id);
     }
 
 
@@ -82,19 +92,9 @@ public class Controller {
      */
 
     @GetMapping("items/{tag}")
-    public List<Fooditem> getFoodByTag(@PathVariable long id){
-        return fooditemService.getFooditemByTag(id);
+    public List<Item> getFoodByTag(@PathVariable String tag){
+        return itemService.getItemByTag(tag);
     }
-
-
-    /**
-     * Endpoint on GET localhost:9000/items/{ingredient} responds with a JSON containing item by ingredient.
-     */
-    @GetMapping("items/{ingredient}")
-    public List<Fooditem> getFoodByIngredient(@PathVariable String ingredient){
-        return fooditemService.getFooditemByIngredient(ingredient);
-    }
-
 
 
     /**
