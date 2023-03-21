@@ -53,7 +53,7 @@ public class Controller {
      */
 
     @GetMapping("items")
-    public Fooditem getAllFoods() throws Exception {
+    public List<Fooditem> getAllFoods() throws Exception {
         return fooditemService.getAllFoods();
     }
 
@@ -62,8 +62,8 @@ public class Controller {
      */
 
     @GetMapping("items/{name}")
-    public Fooditem getFoodByName(@PathVariable String name){
-        return fooditemService.getFoodByName(name);
+    public List<Fooditem> getFoodByName(@PathVariable String name){
+        return fooditemService.getFooditemByName(name);
     }
 
 
@@ -82,7 +82,7 @@ public class Controller {
      */
 
     @GetMapping("items/{tag}")
-    public Fooditem getFoodByTag(@PathVariable long id){
+    public List<Fooditem> getFoodByTag(@PathVariable long id){
         return fooditemService.getFooditemByTag(id);
     }
 
@@ -91,7 +91,7 @@ public class Controller {
      * Endpoint on GET localhost:9000/items/{ingredient} responds with a JSON containing item by ingredient.
      */
     @GetMapping("items/{ingredient}")
-    public Fooditem getFoodByIngredient(@PathVariable String ingredient){
+    public List<Fooditem> getFoodByIngredient(@PathVariable String ingredient){
         return fooditemService.getFooditemByIngredient(ingredient);
     }
 
