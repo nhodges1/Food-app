@@ -1,0 +1,125 @@
+Index: src/main/java/Service/UserService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Service;\r\n\r\nimport Model.User;\r\nimport Repository.UserRepository;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\n\r\npublic class UserService {\r\n    UserRepository userRepository;\r\n\r\n    @Autowired\r\n    public UserService(UserRepository userRepository){\r\n        this.userRepository = userRepository;\r\n    }\r\n    // new registration\r\n    public User addAccount(User user) {\r\n        if (user.getUserName() != \"\" && user.getPassword().length() >= 4) {\r\n            Optional<User> addAccount(User user);\r\n            return user;\r\n        }\r\n        return null;\r\n    }\r\n\r\n    // login with existing account\r\n    public User existingAccount(String username, String password) {\r\n        User user = userRepository.getUserByName(username);\r\n        if (user.getPassword() == password)\r\n            return user;\r\n        else\r\n            return null;\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/Service/UserService.java b/src/main/java/Service/UserService.java
+--- a/src/main/java/Service/UserService.java	
++++ b/src/main/java/Service/UserService.java	
+@@ -4,6 +4,8 @@
+ import Repository.UserRepository;
+ import org.springframework.beans.factory.annotation.Autowired;
+ 
++import java.util.Optional;
++
+ public class UserService {
+     UserRepository userRepository;
+ 
+Index: src/main/java/Service/FooditemService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Service;\r\n\r\npublic class FooditemService {\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/Service/FooditemService.java b/src/main/java/Service/FooditemService.java
+--- a/src/main/java/Service/FooditemService.java	
++++ b/src/main/java/Service/FooditemService.java	
+@@ -1,4 +1,75 @@
+ package Service;
+ 
++import Model.Fooditem;
++import Repository.FooditemRepository;
++import org.springframework.beans.factory.annotation.Autowired;
++
++import java.util.List;
++import java.util.Optional;
++
++
+ public class FooditemService {
++    FooditemRepository fooditemRepository;
++    @Autowired
++    FooditemService(FooditemRepository fooditemRepository){
++        this.fooditemRepository=fooditemRepository;
++
++    }
++    public Fooditem addWorkout(Fooditem fooditem){
++        Fooditem persistedFooditem = fooditemRepository.save(fooditem);
++       //Application.log.info("FooditemService: saving a fooditem: "+fooditem);
++        return persistedFooditem;
++    }
++    public List<Fooditem> getAllFooditem(){
++        List<Fooditem> fooditemList= fooditemRepository.findAll();
++      //  Application.log.info("FooditemService: returning all Fooditem: "+fooditemList);
++        return fooditemList;
++    }
++
++    public Fooditem getFooditemByFoodId(long foodId){
++        Optional<Fooditem> fooditemOptional = fooditemRepository.findById(foodId);
++        Fooditem fooditem = fooditemOptional.get();
++       //Application.log.info("WorkoutService: Getting workout by ID: "+id+", "+workout);
++        return fooditemOptional.get();
++    }
++
++    public Fooditem getFooditemByCategoryId(long categoryId){
++        Optional<Fooditem> fooditemOptional = fooditemRepository.findById(categoryId);
++        Fooditem fooditem = fooditemOptional.get();
++        //Application.log.info("WorkoutService: Getting workout by ID: "+id+", "+workout);
++        return fooditemOptional.get();
++    }
++
++
++    public Fooditem getFooditemByPrice(long priceOfItem){
++        Optional<Fooditem> fooditemOptional = fooditemRepository.findById(priceOfItem);
++        Fooditem fooditem = fooditemOptional.get();
++        //Application.log.info("WorkoutService: Getting workout by ID: "+id+", "+workout);
++        return fooditemOptional.get();
++    }
++
++    public Fooditem getFooditemByFoodName(String foodName){
++        Fooditem fooditem=  fooditemRepository.findFooditemByName(foodName);
++
++        //Application.log.info("WorkoutService: Getting workout by ID: "+id+", "+workout);
++        return fooditemOptional.get();
++    }
++
++    public Fooditem deleteFooditem(long foodId){
++        Optional<Fooditem> fooditemOptional = fooditemRepository.findById(foodId);
++        Fooditem fooditem = fooditemOptional.get();
++       fooditemRepository.delete(fooditem);
++       // Application.log.info("WorkoutService: deleting workout of ID: "+id+" which was: "+workout);
++        return fooditem;
++    }
++
++    public Fooditem updateWorkoutTitle(long foodId, Fooditem newFooditem){
++        Optional<Fooditem> fooditemOptional = fooditemRepository.findById(foodId);
++        Fooditem fooditem = fooditemOptional.get();
++        fooditem.setFoodName(newFooditem.getFoodName());
++        fooditemRepository.save(fooditem);
++      //  Application.log.info("Updated workout of ID: "+id+", which is now: "+workout);
++        return fooditem;
++    }
++
+ }
+Index: src/main/java/Model/Fooditem.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package Model;\r\nimport com.fasterxml.jackson.annotation.JsonManagedReference;\r\nimport jakarta.persistence.*;\r\nimport lombok.*;\r\n\r\nimport java.util.List;\r\n\r\n@Entity\r\n@Data\r\n@ToString\r\n@EqualsAndHashCode\r\n@AllArgsConstructor\r\n@NoArgsConstructor\r\npublic class Fooditem {\r\n    private int foodId;\r\n    private String foodName;\r\n    private int categoryId;\r\n    private String categoryName;\r\n    private String description;\r\n    private int priceOfItem;\r\n    private String foodTag;\r\n\r\n    @OneToMany(fetch = FetchType.EAGER)\r\n    @JsonManagedReference\r\n    private List<Fooditem> fooditem;\r\n}
+===================================================================
+diff --git a/src/main/java/Model/Fooditem.java b/src/main/java/Model/Fooditem.java
+--- a/src/main/java/Model/Fooditem.java	
++++ b/src/main/java/Model/Fooditem.java	
+@@ -12,12 +12,12 @@
+ @AllArgsConstructor
+ @NoArgsConstructor
+ public class Fooditem {
+-    private int foodId;
++    private long foodId;
+     private String foodName;
+-    private int categoryId;
++    private long categoryId;
+     private String categoryName;
+     private String description;
+-    private int priceOfItem;
++    private long priceOfItem;
+     private String foodTag;
+ 
+     @OneToMany(fetch = FetchType.EAGER)

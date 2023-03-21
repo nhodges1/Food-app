@@ -12,6 +12,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Fooditem {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int foodId;
     private String foodName;
     private int categoryId;
