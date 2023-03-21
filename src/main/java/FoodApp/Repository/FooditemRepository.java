@@ -1,6 +1,6 @@
-package Repository;
+package FoodApp.Repository;
 
-import Model.Fooditem;
+import FoodApp.Model.Fooditem;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -14,8 +14,8 @@ public interface FooditemRepository extends JpaRepository<Fooditem, Long> {
     List<Fooditem> findFooditemByName(@Param("foodName") String foodName);
 
 
-    @Query("FROM Fooditem WHERE categoryName= :foodName")
-    List<Fooditem> findFooditemByCategoryName(@Param("categoryName") String categoryName);
+    @Query("FROM Fooditem WHERE category= :foodName")
+    List<Fooditem> findFooditemByCategory(@Param("categoryName") String categoryName);
 
     @Query("FROM Fooditem WHERE foodId = :foodId")
     List<Fooditem> findFooditemByFoodId(@Param("foodId")Long foodId );

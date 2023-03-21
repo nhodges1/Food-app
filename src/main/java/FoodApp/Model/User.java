@@ -1,10 +1,13 @@
-package Model;
+package FoodApp.Model;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class User {
-    public String userId;
-    public String userName;
-    public String userEmail;
-    public String password;
+    private String userId;
+    private String userName;
+    private String userEmail;
+    private String password;
 
     public User(){
 

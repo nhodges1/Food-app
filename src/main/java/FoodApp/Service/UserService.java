@@ -1,9 +1,13 @@
-package Service;
+package FoodApp.Service;
 
-import Model.User;
-import Repository.UserRepository;
+import FoodApp.Model.User;
+import FoodApp.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
+@Service
 public class UserService {
     UserRepository userRepository;
 
@@ -14,7 +18,7 @@ public class UserService {
     // new registration
     public User addAccount(User user) {
         if (user.getUserName() != "" && user.getPassword().length() >= 4) {
-            Optional<User> addAccount(User user);
+            Optional<User> optionalUser = userRepository.addAccount(user);
             return user;
         }
         return null;

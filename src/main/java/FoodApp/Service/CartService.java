@@ -1,11 +1,10 @@
-package Service;
+package FoodApp.Service;
 
-import Model.Cart;
-import Model.Fooditem;
-import Repository.CartRepository;
-import Repository.FooditemRepository;
+import FoodApp.Model.Cart;
+import FoodApp.Model.Fooditem;
+import FoodApp.Repository.CartRepository;
+import FoodApp.Repository.FooditemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

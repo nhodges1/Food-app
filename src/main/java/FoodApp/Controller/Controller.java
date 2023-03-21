@@ -1,11 +1,11 @@
-package Controller;
+package FoodApp.Controller;
 
-import Model.Cart;
-import Model.Fooditem;
-import Model.User;
-import Service.CartService;
-import Service.FooditemService;
-import Service.UserService;
+import FoodApp.Model.Cart;
+import FoodApp.Model.Fooditem;
+import FoodApp.Model.User;
+import FoodApp.Service.CartService;
+import FoodApp.Service.FooditemService;
+import FoodApp.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -73,7 +73,7 @@ public class Controller {
 
     @GetMapping("items/{cat_id}")
     public Fooditem getFoodByCategory(@PathVariable long id){
-        return fooditemService.getFoodByCategory(id);
+        return fooditemService.getFooditemByCategory(id);
     }
 
 
@@ -83,7 +83,7 @@ public class Controller {
 
     @GetMapping("items/{tag}")
     public Fooditem getFoodByTag(@PathVariable long id){
-        return fooditemService.getFoodByTag(id);
+        return fooditemService.getFooditemByTag(id);
     }
 
 
@@ -92,7 +92,7 @@ public class Controller {
      */
     @GetMapping("items/{ingredient}")
     public Fooditem getFoodByIngredient(@PathVariable String ingredient){
-        return fooditemService.getFoodByIngredient(ingredient);
+        return fooditemService.getFooditemByIngredient(ingredient);
     }
 
 
