@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="Application and pom.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_1.xml" afterDir="false" />
+    <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="removed extra resources folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/FooditemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/FooditemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Service/FooditemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/FooditemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Fooditem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Fooditem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679344911447</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="removed extra resources folder">
+      <created>1679427744802</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679427744802</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +134,7 @@
     <MESSAGE value="Cart User models" />
     <MESSAGE value="Application and pom.xml" />
     <MESSAGE value="ws" />
-    <option name="LAST_COMMIT_MESSAGE" value="ws" />
+    <MESSAGE value="removed extra resources folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed extra resources folder" />
   </component>
 </project>
