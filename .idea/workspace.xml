@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="Application and pom.xml">
+    <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="user optionals fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Fooditem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Fooditem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/FooditemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/FooditemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/CartService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/FooditemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/FooditemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +108,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679344911447</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="moved files to package">
+      <created>1679417573313</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679417573313</updated>
+    </task>
+    <task id="LOCAL-00007" summary="user optionals fixed">
+      <created>1679420006379</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679420006379</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -138,6 +141,8 @@
     <MESSAGE value="Cart User models" />
     <MESSAGE value="Application and pom.xml" />
     <MESSAGE value="ws" />
-    <option name="LAST_COMMIT_MESSAGE" value="ws" />
+    <MESSAGE value="moved files to package" />
+    <MESSAGE value="user optionals fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="user optionals fixed" />
   </component>
 </project>
