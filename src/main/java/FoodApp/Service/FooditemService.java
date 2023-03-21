@@ -17,39 +17,39 @@ public class FooditemService {
     }
 
 
-    public List<Fooditem> getAllFoodItem(){
-    List<Fooditem> fooditemList= fooditemRepository.findAll();
-    return fooditemList;
+    public List<Fooditem> getAllFoods(){
+    List<Fooditem> list= fooditemRepository.findAll();
+    return list;
     }
 
-    public Fooditem addFoodItem(Fooditem fooditem){
+    public Fooditem addFooditem(Fooditem fooditem){
     Fooditem addedFooditem= fooditemRepository.save(fooditem);
 
         return addedFooditem;
     }
 
-    public Fooditem getFoodItemByFoodId(long foodId){
+    public Fooditem getFooditemByFoodId(long foodId){
 
       Optional<Fooditem> fooditemOptional = fooditemRepository.findById( foodId);
       Fooditem fooditem = fooditemOptional.get();
       return fooditem;
     }
 
-    public Fooditem getFoodItemByCategoryId(long categoryId){
+    public Fooditem getFooditemByCategory(long categoryId){
 
         Optional<Fooditem> fooditemOptional = fooditemRepository.findById( categoryId);
         Fooditem fooditem = fooditemOptional.get();
         return fooditem;
     }
 
-    public Fooditem getFoodItemByPrice(long priceOfItem){
+    public Fooditem getFooditemByPrice(long priceOfItem){
 
         Optional<Fooditem> fooditemOptional = fooditemRepository.findById( priceOfItem);
         Fooditem fooditem = fooditemOptional.get();
         return fooditem;
     }
 
-    public List<Fooditem> getFooditemByFoodName(String foodName){
+    public List<Fooditem> getFooditemByName(String foodName){
         List<Fooditem> fooditems=fooditemRepository.findFooditemByName(foodName);
         return fooditems;
     }
@@ -59,13 +59,13 @@ public class FooditemService {
         return fooditems;
     }
 
-    public List<Fooditem> getFooditemByDescription(String description){
-        List<Fooditem> fooditems=fooditemRepository.findFooditemByCategory(description);
+    public List<Fooditem> getFooditemByIngredient(String ingredient){
+        List<Fooditem> fooditems=fooditemRepository.findFooditemByCategory(ingredient);
         return fooditems;
     }
 
-    public List<Fooditem> getFooditemByFoodTag(String foodTag){
-        List<Fooditem> fooditems=fooditemRepository.findFooditemByCategory(foodTag);
+    public List<Fooditem> getFooditemByTag(long foodTag){
+        List<Fooditem> fooditems=fooditemRepository.findFooditemByTag(foodTag);
         return fooditems;
     }
 }
