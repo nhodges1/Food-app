@@ -30,7 +30,7 @@ public class ItemService {
     }
 
     public List<Item> getItemByName(String foodName){
-        return itemRepository.findFooditemByName(foodName);
+        return itemRepository.findItemByFoodName(foodName);
     }
 
     public Item getItemByCategory(long catId){
@@ -42,6 +42,6 @@ public class ItemService {
 
 
     public List<Item> getItemByTag(String tag){
-        return itemRepository.findFooditemByTag(tag);
+        return itemRepository.findItemByTag(tag);
     }
 }

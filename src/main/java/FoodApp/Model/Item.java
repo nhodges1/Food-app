@@ -14,6 +14,7 @@ import java.util.List;
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private int foodId;
     @Column
     private String foodName;
@@ -25,5 +26,5 @@ public class Item {
 
     @OneToMany(fetch = FetchType.EAGER)
     @JsonManagedReference
-    private List<Item> item;
+    private List<Item> item1;
 }

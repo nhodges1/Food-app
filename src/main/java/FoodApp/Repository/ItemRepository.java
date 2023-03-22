@@ -10,12 +10,12 @@ import java.util.List;
 public interface ItemRepository extends JpaRepository<Item, Long> {
 
 
-    @Query("FROM Fooditem WHERE foodName= :foodName")
-    List<Item> findFooditemByName(@Param("foodName") String foodName);
+    @Query("FROM Item WHERE foodName= :foodName")
+    List<Item> findItemByFoodName(@Param("foodName") String foodName);
 
 
-    @Query("FROM Fooditem WHERE category= :foodName")
-    List<Item> findFooditemByCategory(@Param("categoryName") String categoryName);
+    @Query("FROM Item WHERE categoryName= :categoryName")
+    List<Item> findItemByCategoryName(@Param("categoryName") String categoryName);
 
   /*  @Query("FROM Fooditem WHERE foodId = :foodId")
     List<Fooditem> findFooditemByFoodId(@Param("foodId")Long foodId );
@@ -26,10 +26,10 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     @Query("FROM Fooditem WHERE priceOfItem = :priceOfItem")
     List<Fooditem> findFooditemByPrice(@Param("foodId")Long priceOfItem );*/
 
-    @Query("FROM Fooditem WHERE description= :description")
-    List<Item> findFooditemByDescription(@Param("description")String description);
+    @Query("FROM Item WHERE description= :description")
+    List<Item> findItemByDescription(@Param("description")String description);
 
-    @Query("FROM Fooditem WHERE foodTag= :foodTag")
-    List<Item> findFooditemByTag(@Param("foodTag")String foodTag );
+    @Query("FROM Item WHERE foodTag= :foodTag")
+    List<Item> findItemByTag(@Param("foodTag")String foodTag);
 
 }
