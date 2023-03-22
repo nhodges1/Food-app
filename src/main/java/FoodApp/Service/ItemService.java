@@ -33,11 +33,11 @@ public class ItemService {
         return itemRepository.findItemByFoodName(foodName);
     }
 
-    public Item getItemByCategory(long catId){
+    public List<Item> getItemByCategory(long catId){
 
-        Optional<Item> fooditemOptional = itemRepository.findById(catId);
-        Item fooditem = fooditemOptional.get();
-        return fooditem;
+        List<Item> fooditemOptional = itemRepository.findItemByCategoryId(catId);
+        //Item fooditem = fooditemOptional.get();
+        return fooditemOptional;
     }
 
 

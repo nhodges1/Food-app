@@ -14,8 +14,8 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     List<Item> findItemByFoodName(@Param("foodName") String foodName);
 
 
-    @Query("FROM Item WHERE categoryName= :categoryName")
-    List<Item> findItemByCategoryName(@Param("categoryName") String categoryName);
+    @Query("FROM Item WHERE categoryId= :categoryId")
+    List<Item> findItemByCategoryId(@Param("categoryId") long categoryId);
 
   /*  @Query("FROM Fooditem WHERE foodId = :foodId")
     List<Fooditem> findFooditemByFoodId(@Param("foodId")Long foodId );

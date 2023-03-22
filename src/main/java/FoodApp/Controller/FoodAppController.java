@@ -88,7 +88,7 @@ public class FoodAppController {
      */
 
     @GetMapping("items/category/{catId}")
-    public Item getFoodByCategory(@PathVariable long catId){
+    public List<Item> getFoodByCategory(@PathVariable long catId){
         return itemService.getItemByCategory(catId);
     }
 

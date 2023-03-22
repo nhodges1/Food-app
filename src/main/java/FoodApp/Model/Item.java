@@ -9,7 +9,7 @@ import java.util.List;
 @Data
 @ToString
 @EqualsAndHashCode
-@AllArgsConstructor
+//@AllArgsConstructor
 @NoArgsConstructor
 public class Item {
     @Id
@@ -19,12 +19,21 @@ public class Item {
     @Column
     private String foodName;
     private int categoryId;
-    private String categoryName;
     private String description;
-    private int priceOfItem;
+    private double priceOfItem;
     private String foodTag;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    @JsonManagedReference
-    private List<Item> items;
+
+    public Item(int foodId, String foodName, int categoryId, String description, double priceOfItem, String foodTag){
+        this.foodId = foodId;
+        this.foodName = foodName;
+        this. categoryId = categoryId;
+        this.description = description;
+        this.priceOfItem = priceOfItem;
+        this.foodTag = foodTag;
+    }
+
+//    @OneToMany(fetch = FetchType.EAGER)
+//    @JsonManagedReference
+//    private List<Item> items;
 }
