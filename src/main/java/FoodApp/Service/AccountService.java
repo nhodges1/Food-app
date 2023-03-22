@@ -5,6 +5,7 @@ import FoodApp.Repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -38,12 +39,15 @@ public class AccountService {
 
 
     // login with existing account
-    public Account existingAccount(String username, String password) {
-        Optional<Account> optionalUser = accountRepository.getUserByName(username);
-        Account account = optionalUser.get();
-        if (account.getPassword() == password)
-            return account;
-        else
+    public Account existingAccount(String userName, String password) {
+        Optional<Account> optionalUser = accountRepository.getUserByName(userName);
+        if(optionalUser.isEmpty()){
             return null;
+        }
+        Account existing = optionalUser.get();
+        if (Objects.equals(existing.getPassword(), password))
+           return existing;
+        else
+           return null;
     }
 }

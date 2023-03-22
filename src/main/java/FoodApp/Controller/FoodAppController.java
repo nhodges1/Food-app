@@ -7,6 +7,7 @@ import FoodApp.Service.CartService;
 import FoodApp.Service.ItemService;
 import FoodApp.Service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -41,8 +42,13 @@ public class FoodAppController {
      */
 
     @PostMapping("login")
-    public Account login(@RequestBody Account account){
-        return accountService.existingAccount(account.getUserName(), account.getPassword());
+    public Account login(@RequestBody @NonNull Account account){
+        Account exist = accountService.existingAccount(account.getUserName(), account.getPassword());
+        if(exist!=null){
+            return account;
+        }
+        else
+            return null;
     }
 
 

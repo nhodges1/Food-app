@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="Application and pom.xml">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="account name change and repo fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/FoodAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/FoodAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/FoodAppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/FoodAppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Service/FoodUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/AccountService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +77,15 @@
       <recent name="" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="FoodApp.Application" />
+      <module name="Food-app" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -132,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679430948353</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="account name change and repo fix">
+      <created>1679514607065</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679514607065</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +163,7 @@
     <MESSAGE value="Cart User models" />
     <MESSAGE value="ws" />
     <MESSAGE value="Application and pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Application and pom.xml" />
+    <MESSAGE value="account name change and repo fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="account name change and repo fix" />
   </component>
 </project>

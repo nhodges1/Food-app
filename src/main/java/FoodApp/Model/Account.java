@@ -6,29 +6,21 @@ import jakarta.persistence.Id;
 @Entity
 public class Account {
     @Id
-    private String userId;
     private String userName;
-    private String userEmail;
+    private String name;
+    private String email;
     private String password;
 
     public Account(){
 
     }
-    public Account(String userId, String userName, String userEmail, String password){
-        this.userId = userId;
+    public Account(String userName, String name, String email, String password){
         this.userName = userName;
-        this.userEmail = userEmail;
+        this.name = name;
+        this.email = email;
         this.password = password;
     }
-    public String getUserId(){
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
-    public String getUserName() {
+    public String getUserName(){
         return userName;
     }
 
@@ -36,12 +28,20 @@ public class Account {
         this.userName = userName;
     }
 
-    public String getUserEmail() {
-        return userEmail;
+    public String getName() {
+        return name;
     }
 
-    public void setUserEmail(String userEmail) {
-        this.userEmail = userEmail;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {
