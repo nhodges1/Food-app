@@ -4,17 +4,17 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class FoodAppUser {
+public class Account {
     @Id
     private String userId;
     private String userName;
     private String userEmail;
     private String password;
 
-    public FoodAppUser(){
+    public Account(){
 
     }
-    public FoodAppUser(String userId, String userName, String userEmail, String password){
+    public Account(String userId, String userName, String userEmail, String password){
         this.userId = userId;
         this.userName = userName;
         this.userEmail = userEmail;

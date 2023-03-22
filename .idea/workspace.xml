@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="Application and pom.xml">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/FoodAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/FoodAppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/FoodAppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Account.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/FoodAppUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/FoodAppUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Service/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/ItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/FoodUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/FoodAppUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/AccountRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Service/FoodUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/AccountService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
     "last_opened_file_path": "C:/Users/joe76/Documents/dev/Food-app",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>

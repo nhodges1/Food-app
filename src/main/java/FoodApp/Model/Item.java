@@ -26,5 +26,5 @@ public class Item {
 
     @OneToMany(fetch = FetchType.EAGER)
     @JsonManagedReference
-    private List<Item> item1;
+    private List<Item> items;
 }

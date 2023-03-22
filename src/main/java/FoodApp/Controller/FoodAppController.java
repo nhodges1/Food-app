@@ -2,10 +2,10 @@ package FoodApp.Controller;
 
 import FoodApp.Model.Cart;
 import FoodApp.Model.Item;
-import FoodApp.Model.FoodAppUser;
+import FoodApp.Model.Account;
 import FoodApp.Service.CartService;
 import FoodApp.Service.ItemService;
-import FoodApp.Service.FoodUserService;
+import FoodApp.Service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,14 +14,14 @@ import java.util.List;
 @RestController
 public class FoodAppController {
 
-    FoodUserService foodUserService;
+    AccountService accountService;
     ItemService itemService;
     CartService cartService;
 
     @Autowired
-    public FoodAppController(FoodUserService foodUserService, ItemService itemService, CartService cartService) {
+    public FoodAppController(AccountService accountService, ItemService itemService, CartService cartService) {
         this.itemService = itemService;
-        this.foodUserService = foodUserService;
+        this.accountService = accountService;
         this.cartService = cartService;
     }
 
@@ -32,18 +32,18 @@ public class FoodAppController {
      */
 
     @PostMapping("register")
-    public FoodAppUser register(@RequestBody FoodAppUser foodAppUser){
-        return foodUserService.addAccount(foodAppUser);
+    public Account register(@RequestBody Account account){
+        return accountService.addAccount(account);
     }
 
     /**
      * Endpoint on POST localhost:9000/login responds with a JSON containing username and password.
      */
 
-  /*  @PostMapping("login")
-    public FoodAppUser login(@RequestBody FoodAppUser foodAppUser){
-        return foodUserService.existingAccount(foodAppUser.getUserName(), foodAppUser.getPassword());
-    }*/
+    @PostMapping("login")
+    public Account login(@RequestBody Account account){
+        return accountService.existingAccount(account.getUserName(), account.getPassword());
+    }
 
 
     /**
