@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Optional;
 
 public interface AccountRepository extends JpaRepository<Account, Long>{
-  @Query("FROM Account WHERE userName = :userName")
-  Optional<Account> getUserByName(@Param("userName") String userName);
+  @Query("FROM Account WHERE username = :username")
+  Optional<Account> getUserByName(@Param("username") String username);
   //@Query("FROM users WHERE name= :name")
   //List<Account> findAccountByUserName(String userName);
 

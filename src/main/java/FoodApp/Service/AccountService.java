@@ -19,8 +19,8 @@ public class AccountService {
 
     // new registration
    public Account addAccount(Account account) {
-        if (account.getUserName() != "" && account.getPassword().length() >= 4) {
-            Optional<Account> optionalUser = accountRepository.getUserByName(account.getUserName());
+        if (account.getUsername() != "" && account.getPassword().length() >= 4) {
+            Optional<Account> optionalUser = accountRepository.getUserByName(account.getUsername());
             if(optionalUser.isEmpty()) {
                 accountRepository.save(account);
                 return account;
@@ -39,8 +39,8 @@ public class AccountService {
 
 
     // login with existing account
-    public Account existingAccount(String userName, String password) {
-        Optional<Account> optionalUser = accountRepository.getUserByName(userName);
+    public Account existingAccount(String username, String password) {
+        Optional<Account> optionalUser = accountRepository.getUserByName(username);
         if(optionalUser.isEmpty()){
             return null;
         }

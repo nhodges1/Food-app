@@ -7,11 +7,16 @@ import FoodApp.Service.CartService;
 import FoodApp.Service.ItemService;
 import FoodApp.Service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+@CrossOrigin(origins = {"http://localhost:4200"}, allowCredentials = "true")
 @RestController
 public class FoodAppController {
 
@@ -42,13 +47,17 @@ public class FoodAppController {
      */
 
     @PostMapping("login")
-    public Account login(@RequestBody @NonNull Account account){
-        Account exist = accountService.existingAccount(account.getUserName(), account.getPassword());
-        if(exist!=null){
-            return account;
+    public ResponseEntity<Map<String, String>> login(@RequestBody @NonNull Account account){
+        Account exist = accountService.existingAccount(account.getUsername(), account.getPassword());
+        if(exist != null){
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Login successful.");
+            return ResponseEntity.ok().body(response);
+        } else {
+            Map<String, String> response = new HashMap<>();
+            response.put("message", "Invalid username or password.");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
-        else
-            return null;
     }
 
 
