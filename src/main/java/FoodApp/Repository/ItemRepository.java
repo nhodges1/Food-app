@@ -10,7 +10,7 @@ import java.util.List;
 public interface ItemRepository extends JpaRepository<Item, Long> {
 
 
-    @Query("FROM Item WHERE foodName= :foodName")
+    @Query("FROM Item WHERE LOWER(foodName) LIKE %:foodName%")
     List<Item> findItemByFoodName(@Param("foodName") String foodName);
 
 
