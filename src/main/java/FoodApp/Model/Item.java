@@ -33,7 +33,7 @@ public class Item {
         this.foodTag = foodTag;
     }
 
-//    @OneToMany(fetch = FetchType.EAGER)
-//    @JsonManagedReference
-//    private List<Item> items;
+   @OneToMany(fetch = FetchType.EAGER)
+    @JsonManagedReference
+   private List<Item> items;
 }

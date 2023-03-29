@@ -1,26 +1,37 @@
 package FoodApp.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.List;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Cart {
+
     @Id
-    private int user_id;
-    private int cart_id;
-    private int item_id;
-    private int quantity;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   // private int user_id;
+    private int id;
+   // private int item_id;
+  //  private int quantity;
 
-    private Cart(){}
 
-    private Cart(int user_id, int cart_id, int item_id, int quantity){
+
+  /*  private Cart(int user_id, int cart_id, int item_id, int quantity){
         this.user_id = user_id;
         this.cart_id = cart_id;
         this.item_id = item_id;
         this.quantity = quantity;
-    }
+    }*/
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Item> items;
 
-    public int getUser_id() {
+    private Double totalPrice;
+
+  /*  public int getUser_id() {
         return user_id;
     }
     public void setUser_id(int user_id) {
@@ -43,5 +54,5 @@ public class Cart {
     }
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
+    }*/
 }
