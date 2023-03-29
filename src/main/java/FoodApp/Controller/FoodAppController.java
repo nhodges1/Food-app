@@ -112,16 +112,32 @@ public class FoodAppController {
     }
 
 
-    /**
-     * CART ENDPOINTS
-     *
-     * Endpoint on GET localhost:9000/{user_id}/cart
-     */
-
-    @GetMapping("{user_id}/cart")
-    public List<Cart> getCart(@PathVariable long id){
-        return cartService.getCart(id);
+    @GetMapping("carts")
+    public List<Cart> getAllCarts() {
+        return cartService.getAllCarts();
     }
 
 
+    @GetMapping("/{id}")
+    public Cart getCartById(@PathVariable long id) throws Exception{
+        return  cartService.getCartById(id);
+    }
+
+    @PostMapping
+    public Cart createCart(@RequestBody Cart cart) {
+        return cartService.createCart(cart);
+    }
+
+    @PostMapping("/{cartId}/items/{itemId}")
+    public Cart addItemToCart(@PathVariable Long cartId, @PathVariable Long itemId) throws Exception {
+        return cartService.addItemToCart(cartId, itemId);
+    }
+
+    @DeleteMapping("/{cartId}/items/{itemId}")
+    public Cart removeItemFromCart(@PathVariable Long cartId, @PathVariable Long itemId)throws Exception {
+        return cartService.removeItemFromCart(cartId, itemId);
+    }
+
 }
+
+

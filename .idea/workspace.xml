@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb4d2378-47f5-498a-bf60-2f210a58482e" name="Changes" comment="hard coded repo in">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_21_2023_1_02_PM__Changes_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/FoodAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Controller/FoodAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/AccountService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Cart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Repository/CartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FoodApp/Service/CartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FoodApp/Service/CartService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
