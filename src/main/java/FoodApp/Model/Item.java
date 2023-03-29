@@ -1,4 +1,5 @@
 package FoodApp.Model;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -33,7 +34,7 @@ public class Item {
         this.foodTag = foodTag;
     }
 
-   @OneToMany(fetch = FetchType.EAGER)
-    @JsonManagedReference
-   private List<Item> items;
+   @ManyToOne(fetch = FetchType.EAGER)
+   @JsonBackReference
+   private Cart cart;
 }
