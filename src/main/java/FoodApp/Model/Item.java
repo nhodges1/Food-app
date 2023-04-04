@@ -9,7 +9,6 @@ import java.util.List;
 @Data
 @ToString
 @EqualsAndHashCode
-//@AllArgsConstructor
 @NoArgsConstructor
 public class Item {
     @Id
