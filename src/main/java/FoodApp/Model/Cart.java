@@ -1,5 +1,6 @@
 package FoodApp.Model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,6 +18,7 @@ public class Cart {
     private int id;
 
     @OneToMany(cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Item> items;
 
     private Double totalPrice;

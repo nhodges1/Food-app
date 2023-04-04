@@ -118,22 +118,22 @@ public class FoodAppController {
     }
 
 
-    @GetMapping("/{id}")
+    @GetMapping("cart/{id}")
     public Cart getCartById(@PathVariable long id) throws Exception{
         return  cartService.getCartById(id);
     }
 
-    @PostMapping
+    @PostMapping("cart")
     public Cart createCart(@RequestBody Cart cart) {
         return cartService.createCart(cart);
     }
 
-    @PostMapping("/{cartId}/items/{itemId}")
+    @PostMapping("cart/{cartId}/{itemId}")
     public Cart addItemToCart(@PathVariable Long cartId, @PathVariable Long itemId) throws Exception {
         return cartService.addItemToCart(cartId, itemId);
     }
 
-    @DeleteMapping("/{cartId}/items/{itemId}")
+    @DeleteMapping("cart/{cartId}/{itemId}")
     public Cart removeItemFromCart(@PathVariable Long cartId, @PathVariable Long itemId)throws Exception {
         return cartService.removeItemFromCart(cartId, itemId);
     }
